@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-import Draggable from "./Components/Draggable"
+import Draggable from "./Components/Draggable";
 
 function App() {
   return (
     <Container>
       <Draggable>
-      <Rect />
+        <Rect />
       </Draggable>
     </Container>
   );
