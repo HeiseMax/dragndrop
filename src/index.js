@@ -7,7 +7,6 @@ import * as serviceWorker from "./serviceWorker";
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <p>thisIsBullshit</p>
   </React.StrictMode>,
   document.getElementById("root")
 );
