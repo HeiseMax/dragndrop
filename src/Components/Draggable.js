@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useCallback, useEffect } from "react";
 
-const POSITION = { x: 0, y: 0 };
+let POSITION = { x: 300, y: 300 };
 
 const Draggable = ({ children }) => {
   const [state, setState] = useState({
@@ -13,15 +13,15 @@ const Draggable = ({ children }) => {
     setState((state) => ({
       ...state,
       isDraging: true,
-      origin: { x: clientX, y: clientY },
+      origin: { x: origin.x, y: origin.y },
     }));
   }, []);
 
   const handleMouseMove = useCallback(
     ({ clientX, clientY }) => {
       const translation = {
-        x: clientX - state.origin.x,
-        y: clientY - state.origin.y,
+        x: clientX,
+        y: clientY,
       };
 
       setState((state) => ({
@@ -36,7 +36,9 @@ const Draggable = ({ children }) => {
     setState((state) => ({
       ...state,
       isDraging: false,
-    }));
+    }),
+    console.log("up"),
+    POSITION = {x: clientX , y: clientY });
   }, []);
 
   useEffect(() => {
