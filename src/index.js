@@ -7,6 +7,7 @@ import * as serviceWorker from "./serviceWorker";
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <p>This is a new Feature under work!</p>
   </React.StrictMode>,
   document.getElementById("root")
 );
